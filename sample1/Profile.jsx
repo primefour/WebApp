@@ -9,7 +9,6 @@ export default class profile extends React.Component{
         return (
             <div className="profile-component">
             <h1> My Name is {this.props.name}</h1>
-            <h2>My age is {this.props.age} </h2>
             </div>
         )
     }

@@ -11,4 +11,4 @@ const app = document.createElement('div');
 
 document.body.appendChild(app);
 
-ReactDom.render(<Profile/>,app)
+ReactDom.render(<Profile name="lihaihui" />,app)
