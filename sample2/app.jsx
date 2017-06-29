@@ -1,14 +1,28 @@
 import React from 'react'
-import Footer from './Footer'
-import AddTodo from '../containers/AddTodo'
-import VisibleTodoList from '../containers/VisibleTodoList'
+import ReactDom from 'react-dom'
+import store from './store/todo_store.jsx'
+import ToDoListView from './components/todo_listview.jsx'
+
+const toggleTodo = (id) => {
+    console.log("on click item " + id)
+}
+
+var todo_list = [{
+    id:0,
+    text:"hello",
+    completed:false},
+    {
+    id:1,
+    text:"world",
+    completed:false}]
 
 const App = () => (
     <div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
+    <ToDoListView todos={todo_list} onTodoClick= {toggleTodo}/>
     </div>
 )
 
-export default App
+const app = document.createElement('div');
+document.body.appendChild(app);
+
+ReactDom.render(<App/>,app)

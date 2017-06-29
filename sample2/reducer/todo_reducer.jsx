@@ -1,4 +1,4 @@
-import {CombineReducers} from 'redux'
+import {combineReducers} from 'redux'
 
 const todo_reducer = (state = [], action) => {
   switch (action.type) {
@@ -14,7 +14,7 @@ const todo_reducer = (state = [], action) => {
     case 'COMPLETE_TODO':
       return state.map(todo =>
         (todo.id === action.id) 
-          ? {...todo, completed:true}
+          ? {id:todo.id,info:todo.info,completed:true}
           : todo
       )
     default:

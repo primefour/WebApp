@@ -1,5 +1,5 @@
 let todoIdx = 0 
-export addToDo= (info) =>{
+export AddToDo= (info) =>{
     return {
         type:'TODO_ADD',
         id:todoIdx++,
@@ -8,14 +8,14 @@ export addToDo= (info) =>{
 }
 
 
-export completeToDo = (id) =>{
+export CompleteToDo = (id) =>{
     return{
         type:'COMPLETE',
         id
     }
 }
 
-export filterTodo = (filter)=>{
+export FilterToDo = (filter)=>{
     return {
         type:'SET_FILTER',
         filter

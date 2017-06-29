@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ROOT_PATH = path.resolve(__dirname);
-var APP_PATH = path.resolve(ROOT_PATH,'sample1');
+var APP_PATH = path.resolve(ROOT_PATH,'sample2');
 var BUILD_PATH = path.resolve(ROOT_PATH,'build');
 
 
