@@ -3,6 +3,7 @@ import {combineReducers} from 'redux'
 const todo_reducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
+      console.log("ADD_TODO");
       return [
         ...state,
         {
@@ -12,6 +13,7 @@ const todo_reducer = (state = [], action) => {
         }
       ]
     case 'COMPLETE_TODO':
+      console.log("COMPLETE_TODO");
       return state.map(todo =>
         (todo.id === action.id) 
           ? {id:todo.id,info:todo.info,completed:true}

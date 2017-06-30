@@ -1,23 +1,17 @@
 let todoIdx = 0 
-export AddToDo= (info) =>{
-    return {
-        type:'TODO_ADD',
-        id:todoIdx++,
-        info
-    }
-}
+export const AddToDo= (text) =>({
+    type:'ADD_TODO',
+    id:todoIdx++,
+    text 
+})
 
 
-export CompleteToDo = (id) =>{
-    return{
-        type:'COMPLETE',
-        id
-    }
-}
+export const CompleteToDo = (id) =>({
+    type:'COMPLETE_TODO',
+    id
+})
 
-export FilterToDo = (filter)=>{
-    return {
-        type:'SET_FILTER',
-        filter
-    }
-}
+export const FilterToDo = (filter)=>({
+    type:'SET_FILTER',
+    filter
+})

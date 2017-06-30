@@ -1,10 +1,21 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import store from './store/todo_store.jsx'
 import ToDoListView from './components/todo_listview.jsx'
+import CompleteToDo from './action/todo_action.jsx'
+
+import {createStore } from 'redux'
+import ToDoReducer from './reducer/todo_reducer.jsx'
+
+const ToDoStore = createStore(ToDoReducer)
+
+
 
 const toggleTodo = (id) => {
     console.log("on click item " + id)
+    ToDoStore.dispatch({
+        type:'COMPLETE_TODO',
+        id:1
+    })
 }
 
 var todo_list = [{
